@@ -6,7 +6,7 @@
 }
 
 a, a:hover {
-  color: gray;
+  color: #fff7a1;
   text-decoration: none;
 }
 
@@ -14,11 +14,116 @@ ul, ol {
   list-style: none;
 }
 
-/**************************header-begin****************************/
-header {
-  background-color: red;
+input {
+  outline: none;
 }
 
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #fff7a1;
+}
+
+/**************************header-begin****************************/
+header .container {
+  background-color: #00003c;
+}
+header .container nav ul {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+header .container nav ul li {
+  margin: 13px;
+}
+header .container nav ul li a {
+  font-size: 30px;
+}
+header .container #blog-title {
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 20px;
+  margin-left: 30px;
+  margin-bottom: 40px;
+  box-shadow: 10px 10px 0 0 #fff7a1;
+}
+header .container #blog-title h1 {
+  color: #00003c;
+  font-size: 60px;
+  padding: 8px 15px;
+}
+
+/***************************header-end*****************************/
+/**************************card-begin****************************/
+.card {
+  width: 75%;
+  margin: 20px auto;
+  min-height: 150px;
+  border: 3px solid #00003c;
+  border-radius: 10px;
+  overflow: auto;
+}
+.card .card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #00003c;
+  color: #fff7a1;
+  padding: 14px 22px;
+  font-size: 24px;
+}
+.card .card-top .card-postTime {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.card .card-top .card-postTime span {
+  font-size: 20px;
+}
+.card .card-content {
+  padding: 20px;
+  background-color: #fff7a1;
+}
+.card .card-content p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/***************************card-end*****************************/
+/**************************login-begin****************************/
+.login {
+  background-color: red;
+  width: 75%;
+  margin: 20px auto;
+  min-height: 150px;
+  border: 3px solid #00003c;
+  border-radius: 10px;
+  overflow: auto;
+}
+.login .login-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #00003c;
+  color: #fff7a1;
+  padding: 14px 22px;
+  font-size: 24px;
+}
+.login .login-content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/***************************login-end*****************************/
+/**************************header-begin****************************/
+/***************************header-end*****************************/
+/**************************header-begin****************************/
 /***************************header-end*****************************/
 
 /*# sourceMappingURL=index.css.map */
