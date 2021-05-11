@@ -95,8 +95,8 @@ header .container #blog-title h1 {
 
 /***************************card-end*****************************/
 /**************************login-begin****************************/
-.login {
-  background-color: red;
+.form {
+  background-color: #fff7a1;
   width: 75%;
   margin: 20px auto;
   min-height: 150px;
@@ -104,26 +104,153 @@ header .container #blog-title h1 {
   border-radius: 10px;
   overflow: auto;
 }
-.login .login-top {
+.form .form-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #00003c;
   color: #fff7a1;
   padding: 14px 22px;
-  font-size: 24px;
+  font-size: 20px;
 }
-.login .login-content {
+.form .form-content {
   display: flex;
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
+  font-size: 20px;
+}
+.form .form-content .col {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.form .form-content .col span {
+  font-weight: bolder;
+  font-size: 20px;
+}
+.form .form-content .col input {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-size: inherit;
+}
+.form .form-content button {
+  height: 50px;
+  margin: 25px 0 10px 0;
+  background-color: #00003c;
+  color: #fff7a1;
+  font-size: 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 2px 2px #00003c;
+}
+.form .form-content button:active {
+  background-color: rgba(0, 0, 60, 0.85);
+}
+.form .form-content .form-link a {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #00003c;
 }
 
 /***************************login-end*****************************/
-/**************************header-begin****************************/
-/***************************header-end*****************************/
-/**************************header-begin****************************/
-/***************************header-end*****************************/
+/**************************post-begin****************************/
+.post {
+  background-color: #fff7a1;
+  width: 75%;
+  margin: 20px auto;
+  min-height: 150px;
+  border: 3px solid #00003c;
+  border-radius: 10px;
+  overflow: auto;
+}
+.post .post-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #00003c;
+  color: #fff7a1;
+  padding: 14px 22px;
+  font-size: 20px;
+}
+.post .post-content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 20px;
+}
+.post .post-content .col {
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+}
+.post .post-content .col span {
+  font-weight: bolder;
+  font-size: 20px;
+}
+.post .post-content .col textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: inherit;
+}
+.post .post-content button {
+  height: 50px;
+  margin: 20px 0 0 0;
+  background-color: #00003c;
+  color: #fff7a1;
+  font-size: 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 2px 2px #00003c;
+}
+.post .post-content button:active {
+  background-color: rgba(0, 0, 60, 0.85);
+}
+.post .post-content button:last-child {
+  margin-bottom: 20px;
+}
+
+.new-post {
+  margin: 0 auto;
+  width: 180px;
+}
+.new-post .new-post-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #00003c;
+  color: #fff7a1;
+  font-size: 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 2px 2px #00003c;
+}
+
+/***************************post-end*****************************/
+/**************************dashboard-begin****************************/
+.dashboard .container {
+  margin: 15px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard .container li {
+  background-color: rgba(0, 0, 60, 0.65);
+  width: 80%;
+  height: 60px;
+  margin: 10px;
+  color: #fff7a1;
+  border-radius: 10px;
+  line-height: 60px;
+  padding: 0 20px;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/***************************dashboard-end*****************************/
 
 /*# sourceMappingURL=index.css.map */
