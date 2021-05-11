@@ -5,4 +5,5 @@ less
 .DS_Store
 .vscode
 .env
+.css.map
 .map
