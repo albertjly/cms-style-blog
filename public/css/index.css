@@ -213,7 +213,7 @@ header .container #blog-title h1 {
 }
 
 .new-post {
-  margin: 0 auto;
+  margin: 200px auto 0;
   width: 180px;
 }
 .new-post .new-post-btn {
@@ -238,7 +238,7 @@ header .container #blog-title h1 {
 }
 .dashboard .container li {
   background-color: rgba(0, 0, 60, 0.65);
-  width: 80%;
+  width: 75%;
   height: 60px;
   margin: 10px;
   color: #fff7a1;
@@ -246,9 +246,11 @@ header .container #blog-title h1 {
   line-height: 60px;
   padding: 0 20px;
   font-size: 24px;
+}
+.dashboard .container li a {
   display: flex;
   justify-content: space-between;
-  cursor: pointer;
+  width: 100%;
 }
 
 /***************************dashboard-end*****************************/
