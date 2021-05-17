@@ -5,12 +5,15 @@
     <ul class="container">
         <li>
             <a href="/edit-post">
-                <span>{{title}}</span>
-                <span>{{date}}</span>
+                {{> dashboard-post}}
             </a>
         </li>
     </ul>
 </div>
+
+<form class="new-post" action="/new-post">
+    <button type="submit" class="new-post-btn">+ New Post</button>
+</form>
 {{/if}}
 {{/each}}
 {{else}}
