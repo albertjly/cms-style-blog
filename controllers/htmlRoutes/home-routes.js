@@ -3,7 +3,7 @@ const router = require('express').Router();
 router.get('/', (req, res) => {
   
   res.render('homepage', {
-    title: 'The Tech Blog'
+    blog_title: 'The Tech Blog'
   });
 });
 
