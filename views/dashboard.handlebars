@@ -1,22 +1,18 @@
+{{#each dashboardPosts}}
+{{#if post}}
 <div class="dashboard">
     <ul class="container">
         <li>
             <a href="#">
-                <span>Object Oriented Programming</span>
-                <span>05/05/2021</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <span>Department of Motor Vehicle</span>
-                <span>05/05/2021</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <span>Cable News Network</span>
-                <span>05/05/2021</span>
+                <span>{{title}}</span>
+                <span>{{date}}</span>
             </a>
         </li>
     </ul>
 </div>
+{{else}}
+<div class="new-post">
+    <button type="button" class="new-post-btn">+ New Post</button>
+</div>
+{{/if}}
+{{/each}}
