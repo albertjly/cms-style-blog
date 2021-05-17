@@ -95,7 +95,8 @@ header .container #blog-title h1 {
 
 /***************************card-end*****************************/
 /**************************login-begin****************************/
-.form {
+.login-form,
+.signin-form {
   background-color: #fff7a1;
   width: 75%;
   margin: 20px auto;
@@ -104,7 +105,8 @@ header .container #blog-title h1 {
   border-radius: 10px;
   overflow: auto;
 }
-.form .form-top {
+.login-form .form-top,
+.signin-form .form-top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -113,29 +115,34 @@ header .container #blog-title h1 {
   padding: 14px 22px;
   font-size: 20px;
 }
-.form .form-content {
+.login-form .form-content,
+.signin-form .form-content {
   display: flex;
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
   font-size: 20px;
 }
-.form .form-content .col {
+.login-form .form-content .col,
+.signin-form .form-content .col {
   height: 50px;
   display: flex;
   align-items: center;
 }
-.form .form-content .col span {
+.login-form .form-content .col span,
+.signin-form .form-content .col span {
   font-weight: bolder;
   font-size: 20px;
 }
-.form .form-content .col input {
+.login-form .form-content .col input,
+.signin-form .form-content .col input {
   width: 100%;
   height: 100%;
   padding: 10px;
   font-size: inherit;
 }
-.form .form-content button {
+.login-form .form-content button,
+.signin-form .form-content button {
   height: 50px;
   margin: 25px 0 10px 0;
   background-color: #00003c;
@@ -145,10 +152,12 @@ header .container #blog-title h1 {
   cursor: pointer;
   box-shadow: 0 0 2px 2px #00003c;
 }
-.form .form-content button:active {
+.login-form .form-content button:active,
+.signin-form .form-content button:active {
   background-color: rgba(0, 0, 60, 0.85);
 }
-.form .form-content .form-link a {
+.login-form .form-content .form-link a,
+.signin-form .form-content .form-link a {
   display: inline-block;
   margin-bottom: 20px;
   color: #00003c;
