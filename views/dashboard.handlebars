@@ -4,7 +4,7 @@
 <div class="dashboard">
     <ul class="container">
         <li>
-            <a href="#">
+            <a href="/edit-post">
                 <span>{{title}}</span>
                 <span>{{date}}</span>
             </a>
@@ -14,7 +14,7 @@
 {{/if}}
 {{/each}}
 {{else}}
-<div class="new-post">
-    <button type="button" class="new-post-btn">+ New Post</button>
-</div>
+<form class="new-post" action="/new-post">
+    <button type="submit" class="new-post-btn">+ New Post</button>
+</form>
 {{/if}}
