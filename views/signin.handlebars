@@ -1,27 +1,35 @@
-<div class="signin-form">
+<form class="signin-form">
     <div class="form-top">
-        <h1>Sign in</h1>
+        <h1>Sign up</h1>
     </div>
     <div class="form-content">
         <div class="username">
             <div class="col">
-                <span>Username:</span>
+                <span>Your Username:</span>
             </div>
             <div class="col">
-                <input type="text" placeholder="Please sign a username!">
+                <input type="text" id="username-signup" placeholder="Please sign a username!">
+            </div>
+        </div>
+        <div class="email">
+            <div class="col">
+                <span>Your Email:</span>
+            </div>
+            <div class="col">
+                <input type="text" id="email-signup" placeholder="Email Address">
             </div>
         </div>
         <div class="password">
             <div class="col">
-                <span>Password:</span>
+                <span>Your Password:</span>
             </div>
             <div class="col">
-                <input type="password" placeholder="Please type your password!">
+                <input type="password" id="password-signup" placeholder="Please type your password!">
             </div>
         </div>
-        <button type="button">Sign Up</button>
+        <button type="submit">Sign Up</button>
         <div class="form-link">
             <a href="/login">Login instead</a>
         </div>
     </div>
-</div>
+</form>
