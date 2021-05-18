@@ -3,10 +3,7 @@ const { User, Post, Content } = require('../../models');
 
 router.get('/', (req, res) => {
     Post.findAll({
-        attributes: [
-            'id',
-            'title'
-        ],
+        attributes: { exclude: ['user_id'] },
         include: [
             {
                 model: User,
