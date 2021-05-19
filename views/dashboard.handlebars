@@ -1,6 +1,5 @@
 {{#if dashboardPosts}}
 {{#each dashboardPosts}}
-{{#if post}}
 <div class="dashboard">
     <ul class="container">
         <li>
@@ -10,14 +9,9 @@
         </li>
     </ul>
 </div>
+{{/each}}
+{{/if}}
 
 <form class="new-post" action="/new-post">
     <button type="submit" class="new-post-btn">+ New Post</button>
 </form>
-{{/if}}
-{{/each}}
-{{else}}
-<form class="new-post" action="/new-post">
-    <button type="submit" class="new-post-btn">+ New Post</button>
-</form>
-{{/if}}
