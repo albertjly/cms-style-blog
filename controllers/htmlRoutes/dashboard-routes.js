@@ -1,25 +1,36 @@
 const router = require('express').Router();
 const moment = require('moment');
-
-const posts = [
-  {
-    post: true,
-    title: 'Object Oriented Programming',
-    date: moment().format("YYYY/MM/DD -- hh:mm:ss a"),
-    content: 'Object Oriented programming (OOP) is a programming paradigm that relies on the concept of classes and objects.'
-  }
-];
+const sequelize = require('../../config/connection');
+const { User, Post, Content } = require('../../models');
 
 router.get('/', (req, res) => {
-  const postsFilter = posts.filter(data => {
-    if(data.post == true) return data; 
-  });
-  
-  res.render('dashboard', {
-    page_title: 'Dashboard',
-    blog_title: 'My dashboard',
-    dashboardPosts: postsFilter
-  });
+  console.log(req.session);
+  Post.findAll({
+    attributes: { exclude: ['user_id'] },
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+    .then(dbPostData => {
+      const posts = dbPostData.map((post) => {
+        return post.get({ plain: true });
+      });
+      console.log(posts);
+
+      res.render('dashboard', {
+        page_title: 'Dashboard',
+        blog_title: 'My dashboard',
+        dashboardPosts: posts,
+        logged_in: req.session.logged_in
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;
