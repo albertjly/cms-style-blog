@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Content } = require('../../models');
+const withAuth = require('../../utils/auth')
 
 router.get('/', (req, res) => {
     Post.findAll({
@@ -43,6 +44,26 @@ router.get('/:id', (req, res) => {
             res.status(500).json(err);
         });
 });
+
+router.post('/', withAuth, (req, res) => {
+    // expects 
+    // {
+    //     title: 'Taskmaster goes public!', 
+    //     user_id: 1
+    // }
+    Post.create({
+        title: req.body.title,
+        user_id: req.session.user_id
+    })
+        .then(dbPostData => {
+            res.json(dbPostData);
+            console.log(json(dbPostData));
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+})
 
 
 module.exports = router;
