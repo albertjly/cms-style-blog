@@ -45,7 +45,7 @@ router.get('/:id', (req, res) => {
         });
 });
 
-router.post('/', withAuth, (req, res) => {
+router.post('/', (req, res) => {
     // expects 
     // {
     //     title: 'Taskmaster goes public!', 
@@ -53,7 +53,7 @@ router.post('/', withAuth, (req, res) => {
     // }
     Post.create({
         title: req.body.title,
-        user_id: req.session.user_id
+        user_id: req.body.user_id
     })
         .then(dbPostData => {
             res.json(dbPostData);
@@ -63,7 +63,51 @@ router.post('/', withAuth, (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
-})
+});
+
+router.put('/:id', (req, res) => {
+    Post.update(
+        {
+            title: req.body.title
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        }
+    )
+        .then(dbPostData => {
+            if (!dbPostData) {
+                res.status(404).json({ message: 'No post found with this id' });
+                return;
+            }
+            res.json(dbPostData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+router.delete('/:id', (req, res) => {
+    // console.log('id', req.params.id);
+    Post.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(dbPostData => {
+            if (!dbPostData) {
+                res.status(404).json({ message: 'No post found with this id' });
+                return;
+            }
+            res.json(dbPostData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
 
 
 module.exports = router;
