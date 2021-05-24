@@ -26,16 +26,16 @@ Content.init(
             }
         },
         post_id: {
-          type: DataTypes.INTEGER,
-          references: {
-            model: 'post',
-            key: 'id'
-          }
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'post',
+                key: 'id'
+            }
         }
     },
     {
         sequelize,
-        timestamps: false,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
         modelName: 'content'
