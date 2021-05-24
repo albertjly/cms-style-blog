@@ -9,13 +9,32 @@
     {{> web-title}}
 </head>
 <body>
-    {{> header logged_in=logged_in}}
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    {{#if logged_in}}
+                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><button id="logout">Logout</button></li>
+                    {{else}}
+                        <li><a href="/login" id="login">Login</a></li>
+                    {{/if}}
+                </ul>
+            </nav>
+            <div id="blog-title">
+                <h1>{{blog_title}}</h1>
+            </div>
+        </div>
+    </header>
     <section id="blog-content">
         <div class="container">
             {{{ body }}}
         </div>
     </section>
-    <script type="text/javascript" src="js/login.js"></script>
-    <script type="text/javascript" src="js/logout.js"></script>
+    
+    {{#if loggedIn}}
+        <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 </html>
