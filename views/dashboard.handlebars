@@ -1,17 +1,16 @@
 {{#if dashboardPosts}}
-{{#each dashboardPosts}}
 <div class="dashboard">
     <ul class="container">
-        <li>
+      {{#each dashboardPosts}}
+        <li class="dashboard-posts">
             <a href="/edit-post">
                 {{> dashboard-post}}
             </a>
         </li>
+      {{/each}}
     </ul>
 </div>
-{{/each}}
 {{/if}}
-
 <form class="new-post" action="/new-post">
     <button type="submit" class="new-post-btn">+ New Post</button>
 </form>
