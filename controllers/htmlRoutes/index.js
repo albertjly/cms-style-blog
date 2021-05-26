@@ -10,8 +10,8 @@ router.use('/', homeRoute);
 router.use('/dashboard', dashboardRoute);
 router.use('/login', loginRoute);
 router.use('/signin', signinRoute);
-router.use('/edit-post', editPostRoute);
-router.use('/new-post', newPostRoute);
+router.use('/edit', editPostRoute);
+router.use('/new', newPostRoute);
 
 
 module.exports = router;
