@@ -140,13 +140,12 @@ router.post('/login', (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-    if (req.session.loggedIn) {
-        req.session.destroy(() => {
-            res.status(204).end();
-        });
+    if (req.session.logged_in) {
+        req.session.destroy();
+        res.status(204).redirect('/');
     }
     else {
-        res.status(404).end();
+        res.status(404).redirect('/');
     }
 });
 

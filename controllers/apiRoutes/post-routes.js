@@ -53,9 +53,16 @@ router.post('/', (req, res) => {
     // }
     Post.create({
         title: req.body.title,
-        user_id: req.body.user_id
+        user_id: req.session.user_id
     })
         .then(dbPostData => {
+
+            Content.create({
+                content_text: req.body.post_content,
+                user_id: req.session.user_id,
+                post_id: dbPostData.id
+            });
+
             res.json(dbPostData);
             console.log(json(dbPostData));
         })
