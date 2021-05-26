@@ -12,7 +12,8 @@ router.get('/', (req, res) => {
         model: User,
         attributes: ['username']
       }
-    ]
+    ],
+    order: [['createdAt', 'DESC']]
   })
     .then(dbPostData => {
       const posts = dbPostData.map((post) => {
