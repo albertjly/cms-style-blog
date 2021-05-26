@@ -1,17 +1,19 @@
 {{#if homePosts}}
-{{#each homePosts}}
-<div class="card">
-    <div class="card-top">
+  {{#each homePosts}}
+    <div class="card">
+      <div class="card-top">
         <div class="card-title">
-            <h1>{{title}}</h1>
+          <h1>{{title}}</h1>
         </div>
         <div class="card-postTime">
-            <span>{{createdAt}}</span>
+          <span>{{createdAt}}</span>
         </div>
+      </div>
+      <div class="card-content">
+        {{#each contents}}
+          <p>{{content_text}}</p>
+        {{/each}}
+      </div>
     </div>
-    <div class="card-content">
-        {{> post-content}}
-    </div>
-</div>
-{{/each}}
+  {{/each}}
 {{/if}}

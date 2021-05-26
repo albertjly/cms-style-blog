@@ -1,27 +1,39 @@
 <div class="post">
-    <div class="post-top">
-        <h1>Create New Post</h1>
+  <div class="post-top">
+    <h1>Create New Post</h1>
+  </div>
+  <form class="post-content" action="/dashboard">
+    <div>
+      <div class="col">
+        <span>Title:</span>
+      </div>
+      <div class="col">
+        <textarea
+          name="post-title"
+          id="post-title"
+          cols="30"
+          rows="1"
+        ></textarea>
+      </div>
     </div>
-    <div class="post-content">
-        <div>
-            <div class="col">
-                <span>Title:</span>
-            </div>
-            <div class="col">
-                <textarea name="" id="post-title" cols="30" rows="1"></textarea>
-            </div>
-        </div>
-        <div>
-            <div class="col">
-                <span>Content:</span>
-            </div>
-            <div class="col">
-                <textarea name="" id="post-content" cols="60" rows="3"></textarea>
-            </div>
-        </div>
-        <button type="button" id="createPost">Create the New Post</button>
-        <form action="/dashboard">
-            <button type="submit" id="cancelPost" style="width: 100%">Cancel Posting</button>
-        </form>
+    <div>
+      <div class="col">
+        <span>Content:</span>
+      </div>
+      <div class="col">
+        <textarea
+          name="post-content"
+          id="post-content"
+          cols="60"
+          rows="3"
+        ></textarea>
+      </div>
     </div>
+    <button type="submit" id="createPost">Create the New Post</button>
+    <button type="button" id="cancelPost">Cancel Posting</button>
+  </form>
 </div>
+
+<script src="/js/add-post.js"></script>
+<script src="/js/delete-post.js"></script>
+{{! <script src="/js/content.js"></script> }}
