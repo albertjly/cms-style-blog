@@ -3,7 +3,7 @@
     <ul class="container">
       {{#each dashboardPosts}}
         <li class="dashboard-posts">
-            <a href="/edit-post">
+            <a href="/edit">
                 {{> dashboard-post}}
             </a>
         </li>
@@ -11,6 +11,6 @@
     </ul>
 </div>
 {{/if}}
-<form class="new-post" action="/new-post">
+<form class="new-post" action="/new">
     <button type="submit" class="new-post-btn">+ New Post</button>
 </form>
