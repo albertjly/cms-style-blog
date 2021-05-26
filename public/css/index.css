@@ -18,6 +18,11 @@ input {
   outline: none;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -41,6 +46,11 @@ header .container nav ul li {
 }
 header .container nav ul li a {
   font-size: 30px;
+}
+header .container nav ul li button {
+  font-size: 30px;
+  background-color: transparent;
+  color: #fff7a1;
 }
 header .container #blog-title {
   background-color: #fff;
