@@ -1,27 +1,36 @@
 <div class="post">
-    <div class="post-top">
-        <h1>Edit Post</h1>
+  <div class="post-top">
+    <h1>Edit Post</h1>
+  </div>
+  <form class="edit-post-form">
+    <div>
+      <div class="col">
+        <span>Title:</span>
+      </div>
+      <div class="col">
+        <input name="post-title" value="{{post.title}}" />
+      </div>
     </div>
-    <div class="post-content">
-        <div>
-            <div class="col">
-                <span>Title:</span>
-            </div>
-            <div class="col">
-                <textarea name="" id="post-title" cols="30" rows="1"></textarea>
-            </div>
-        </div>
-        <div>
-            <div class="col">
-                <span>Content:</span>
-            </div>
-            <div class="col">
-                <textarea name="" id="post-content" cols="60" rows="3"></textarea>
-            </div>
-        </div>
-        <button type="button" id="updatePost">Update</button>
-        <form action="/dashboard">
-            <button type="submit" id="deletePost" style="width: 100%">Delete the Post</button>
-        </form>
+    <div>
+      <div class="col">
+        <span>Content:</span>
+      </div>
+      <div class="col">
+        <textarea
+          name="post-content"
+          cols="60"
+          rows="3"
+        >{{post.content_text}}</textarea>
+      </div>
     </div>
+    <button type="submit" id="updatePost">Update</button>
+
+  </form>
+  <form action="/dashboard">
+    <button type="submit" id="deletePost" class="delete-post-btn">Delete the
+      Post</button>
+  </form>
 </div>
+
+<script src="/js/delete-post.js"></script>
+<script src="/js/edit-post.js"></script>

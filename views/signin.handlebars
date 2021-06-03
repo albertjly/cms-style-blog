@@ -1,35 +1,45 @@
 <form class="signin-form">
-    <div class="form-top">
-        <h1>Sign up</h1>
+  <div class="form-top">
+    <h1>Sign up</h1>
+  </div>
+  <div class="form-content">
+    <div class="username">
+      <div class="col">
+        <span>Your Username:</span>
+      </div>
+      <div class="col">
+        <input
+          type="text"
+          id="username-signup"
+          placeholder="Please sign a username!"
+        />
+      </div>
     </div>
-    <div class="form-content">
-        <div class="username">
-            <div class="col">
-                <span>Your Username:</span>
-            </div>
-            <div class="col">
-                <input type="text" id="username-signup" placeholder="Please sign a username!">
-            </div>
-        </div>
-        <div class="email">
-            <div class="col">
-                <span>Your Email:</span>
-            </div>
-            <div class="col">
-                <input type="text" id="email-signup" placeholder="Email Address">
-            </div>
-        </div>
-        <div class="password">
-            <div class="col">
-                <span>Your Password:</span>
-            </div>
-            <div class="col">
-                <input type="password" id="password-signup" placeholder="Please type your password!">
-            </div>
-        </div>
-        <button type="submit">Sign Up</button>
-        <div class="form-link">
-            <a href="/login">Login instead</a>
-        </div>
+    <div class="email">
+      <div class="col">
+        <span>Your Email:</span>
+      </div>
+      <div class="col">
+        <input type="text" id="email-signup" placeholder="Email Address" />
+      </div>
     </div>
+    <div class="password">
+      <div class="col">
+        <span>Your Password:</span>
+      </div>
+      <div class="col">
+        <input
+          type="password"
+          id="password-signup"
+          placeholder="Please type your password!"
+        />
+      </div>
+    </div>
+    <button type="submit">Sign Up</button>
+    <div class="form-link">
+      <a href="/login">Login instead</a>
+    </div>
+  </div>
 </form>
+
+<script src="/js/signup.js"></script>
