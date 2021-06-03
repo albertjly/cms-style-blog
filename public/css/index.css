@@ -209,9 +209,10 @@ header .container #blog-title h1 {
   background-color: rgba(0, 0, 60, 0.85);
 }
 .post form[action="/dashboard"] #deletePost {
-  margin-left: 40px;
-  margin-bottom: 1rem;
   width: 90%;
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
 }
 .post .post-content, .post .edit-post-form {
   display: flex;
@@ -235,8 +236,12 @@ header .container #blog-title h1 {
   font-size: inherit;
 }
 
+#cancelPost {
+  margin-bottom: 1rem;
+}
+
 .new-post {
-  margin: 200px auto 0;
+  margin: 2rem auto;
   width: 180px;
 }
 .new-post .new-post-btn {
