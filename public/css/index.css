@@ -5,12 +5,14 @@
   box-sizing: border-box;
 }
 
-a, a:hover {
+a,
+a:hover {
   color: #fff7a1;
   text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -193,28 +195,7 @@ header .container #blog-title h1 {
   padding: 14px 22px;
   font-size: 20px;
 }
-.post .post-content {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 0 auto;
-  font-size: 20px;
-}
-.post .post-content .col {
-  margin: 10px auto;
-  display: flex;
-  align-items: center;
-}
-.post .post-content .col span {
-  font-weight: bolder;
-  font-size: 20px;
-}
-.post .post-content .col textarea {
-  width: 100%;
-  padding: 10px;
-  font-size: inherit;
-}
-.post .post-content button {
+.post button {
   height: 50px;
   margin: 20px 0 0 0;
   background-color: #00003c;
@@ -224,11 +205,34 @@ header .container #blog-title h1 {
   cursor: pointer;
   box-shadow: 0 0 2px 2px #00003c;
 }
-.post .post-content button:active {
+.post button:active {
   background-color: rgba(0, 0, 60, 0.85);
 }
-.post .post-content button:last-child {
-  margin-bottom: 20px;
+.post form[action="/dashboard"] #deletePost {
+  margin-left: 40px;
+  margin-bottom: 1rem;
+  width: 90%;
+}
+.post .post-content, .post .edit-post-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 20px;
+}
+.post .post-content .col, .post .edit-post-form .col {
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+}
+.post .post-content .col span, .post .edit-post-form .col span {
+  font-weight: bolder;
+  font-size: 20px;
+}
+.post .post-content .col textarea, .post .post-content .col input, .post .edit-post-form .col textarea, .post .edit-post-form .col input {
+  width: 100%;
+  padding: 10px;
+  font-size: inherit;
 }
 
 .new-post {
