@@ -22,12 +22,12 @@ router.get('/', (req, res) => {
       const posts = dbPostData.map((post) => {
         return post.get({ plain: true });
       });
-      console.log(posts);
+      // console.log(posts);
       const contents = posts.map((content) => {
         return content.contents[0];
       });
       // console.log(contents);
-      console.log(req.session.logged_in);
+      // console.log(req.session.logged_in);
 
       res.render('homepage', {
         page_title: 'Home',
@@ -41,6 +41,14 @@ router.get('/', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+});
+
+router.get('/login', (req, res) => {
+
+  res.render('login', {
+    page_title: 'Login',
+    blog_title: 'My Account'
+  });
 });
 
 module.exports = router;
