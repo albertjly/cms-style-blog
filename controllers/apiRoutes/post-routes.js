@@ -45,7 +45,7 @@ router.get('/:id', (req, res) => {
         });
 });
 
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     // expects 
     // {
     //     title: 'Taskmaster goes public!', 
@@ -64,7 +64,7 @@ router.post('/', (req, res) => {
             });
 
             res.json(dbPostData);
-            console.log(json(dbPostData));
+            // console.log(json(dbPostData));
         })
         .catch(err => {
             console.log(err);
@@ -72,10 +72,11 @@ router.post('/', (req, res) => {
         });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
-            title: req.body.title
+            title: req.body.title,
+            content_text: req.body.content
         },
         {
             where: {
@@ -84,6 +85,19 @@ router.put('/:id', (req, res) => {
         }
     )
         .then(dbPostData => {
+
+            Content.update(
+                {
+                    content_text: req.body.content
+                },
+                {
+                    where: {
+                        post_id: req.params.id
+                    }
+                }
+            )
+
+            // console.log(dbPostData);
             if (!dbPostData) {
                 res.status(404).json({ message: 'No post found with this id' });
                 return;
@@ -96,7 +110,7 @@ router.put('/:id', (req, res) => {
         });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     // console.log('id', req.params.id);
     Post.destroy({
         where: {
