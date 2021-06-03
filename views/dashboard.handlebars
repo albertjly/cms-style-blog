@@ -1,16 +1,17 @@
 {{#if dashboardPosts}}
-<div class="dashboard">
+  <div class="dashboard">
     <ul class="container">
       {{#each dashboardPosts}}
         <li class="dashboard-posts">
-            <a href="/edit">
-                {{> dashboard-post}}
-            </a>
+          <a href="/dashboard/edit/{{id}}">
+            <span>{{title}}</span>
+            <span>{{format_date updatedAt}}</span>
+          </a>
         </li>
       {{/each}}
     </ul>
-</div>
+  </div>
 {{/if}}
 <form class="new-post" action="/new">
-    <button type="submit" class="new-post-btn">+ New Post</button>
+  <button type="submit" class="new-post-btn">+ New Post</button>
 </form>

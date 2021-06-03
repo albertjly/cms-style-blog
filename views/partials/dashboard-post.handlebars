@@ -1,2 +1,8 @@
-<span>{{title}}</span>
-<span>{{updatedAt}}</span>
+{{#each post}}
+  {{!-- <a href="/dashboard/edit/{{post.id}}" style="width=200px; height=200px;">
+    edit
+  </a> --}}
+  <form action="/dashboard/edit/{{post.id}}">
+    <label for="">edit</label>
+  </form>
+{{/each}}
