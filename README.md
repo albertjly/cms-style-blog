@@ -57,7 +57,7 @@ Static html/css/js, models and seeds, controllers, MVC files. Everything seems e
 
 **`Sign-in:`**
 
-<img src="./public/images/Sign-in.png" width="1000">
+<img src="./public/images/Sign-In.png" width="1000">
 
 **`New-Post:`**
 
